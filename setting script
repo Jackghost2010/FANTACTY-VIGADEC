@@ -1,0 +1,44 @@
+extends Control
+
+var resolution = [
+	1366  *768,
+	1920 * 1080
+]
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_option_button_item_selected(index: int) -> void:
+	if index == 1: DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
+	if index == 2: DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	
+	
+	if index == 3: DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+	pass # Replace with function body.
+
+
+func _on_option_button_2_item_selected(index: int) -> void:
+	if index == 1: DisplayServer.window_set_size(Vector2i(1366,768))
+
+	if index == 2: DisplayServer.window_set_size(Vector2i(1920,1080))
+	
+	
+	if index == 3: DisplayServer.window_set_size(Vector2i(1366,768))
+	
+	if index == 4: DisplayServer.window_set_size(Vector2i(1366,768))
+	
+
+	pass # Replace with function body.
+
+
+func _on_go_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://SCENES/main menu.tscn")
+	pass # Replace with function body.
