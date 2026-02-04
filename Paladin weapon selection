@@ -1,0 +1,33 @@
+extends Control
+
+@onready var hammer_paladin = $PHammer
+@onready var shield_Paladin = $PShield
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_shield_paladin_pressed() -> void:
+	$PShield.show()
+	pass # Replace with function body.
+
+
+func _on_hammer_paladin_pressed() -> void:
+	$PHammer.show()
+	pass # Replace with function body.
+
+
+func _on_go_back_character_selection_from_paladin_weapon_selection_pressed() -> void:
+	get_tree().change_scene_to_file("res://SCENES/Character_Selection.tscn")
+	pass # Replace with function body.
+
+
+func _on_confirm_pressed() -> void:
+	pass # Replace with function body.
