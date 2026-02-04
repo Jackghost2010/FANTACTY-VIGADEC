@@ -1,0 +1,50 @@
+extends Control
+@onready var dagger = $KDagger 
+@onready var scimitar = $KScimitar 
+@onready var Shield = $KShield 
+@onready var Spear = $KSpear 
+@onready var Sword = $KSword 
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_sword_buttom_pressed() -> void:
+	$KSword.show()
+	if $KScimitar.visible(): $KScimitar.hide()
+	if $KSpear.visible(): $KSpear.hide()
+	
+	pass # Replace with function body.
+
+
+func _on_spear_buttom_pressed() -> void:
+	$KSpear.show()
+	if $KSword.visible(): $KSword.hide()
+	if $KScimitar.visible(): $KScimitar.hide()
+	pass # Replace with function body.
+
+
+func _on_shield_buttom_pressed() -> void:
+	$KShield.show()
+	if $KDagger.visible(): $KDagger.hide()
+	pass # Replace with function body.
+
+
+func _on_scimitar_buttom_pressed() -> void:
+	$KScimitar.show()
+	if $KSword.visible(): $KSword.hide()
+	if $KSpear.visible(): $KSpear.hide()
+	pass # Replace with function body.
+
+
+func _on_dagger_buttom_pressed() -> void:
+	$KDagger.show()
+	if $KShield.visible(): $KShield.hide()
+	pass # Replace with function body.
